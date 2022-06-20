@@ -53,6 +53,9 @@ class App extends React.Component {
       /^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/
     );
 
+    // function setState() {
+    //   this.setState({ correct: ' ', number: romanNumber });
+    // }
     if (!romanNumeralRegex.test(romanNumber)) {
       this.setState({
         correct: 'The number is not correct',
@@ -60,8 +63,9 @@ class App extends React.Component {
     } else {
       this.setState({
         number: romanNumber,
-        correct: 'Analizing...',
+        correct: 'Analizing... Computing...',
       });
+      // setTimeout(setState, 3000);
     }
   };
 
